@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Work and Expenditure management</string>
+    <string name="text_label_work">Sổ công việc</string>
+    <string name="text_label_spen">Sổ thu nhập</string>
+    <string name="text_label_report">Báo cáo</string>
+    <string name="text_label_consume">Sổ chi tiêu</string>
 </resources>
