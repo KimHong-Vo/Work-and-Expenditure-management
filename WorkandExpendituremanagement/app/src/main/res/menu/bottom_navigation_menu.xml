@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/page_1"
-        android:enabled="true"
+        android:id="@+id/work"
         android:icon="@drawable/icon_work"
         android:title="@string/text_label_work"/>
     <item
-        android:id="@+id/page_2"
-        android:enabled="true"
+        android:id="@+id/report"
         android:icon="@drawable/icon_report"
-        android:title="@string/text_label_report"/>
+        android:title="@string/text_label_report"
+        />
     <item
-        android:id="@+id/page_3"
-        android:enabled="true"
+        android:id="@+id/spen"
         android:icon="@drawable/icon_spen"
         android:title="@string/text_label_spen"/>
     <item
-        android:id="@+id/page_4"
-        android:enabled="true"
+        android:id="@+id/consume"
         android:icon="@drawable/icon_consume"
-        android:title="@string/text_label_consume" />
+        android:title="Sổ chi tiêu" />
 </menu>
+
+    <!--        android:enabled="true"-->
