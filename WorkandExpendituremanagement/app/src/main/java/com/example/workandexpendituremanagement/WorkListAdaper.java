@@ -26,10 +26,14 @@ public class WorkListAdaper extends ArrayAdapter<Work> {
 //        get view in listItem
         TextView tv1 = (TextView) convertView.findViewById(R.id.work_name_TV);
         TextView tv2 = (TextView) convertView.findViewById(R.id.work_time_TV);
-
+        ImageView img = (ImageView) convertView.findViewById(R.id.work_state_img);
         Work work = (Work) getItem(position);
         tv1.setText(work.getName());
         tv2.setText(work.getSpaceStringTime());
+        if (work.getIsfinish())
+            img.setImageResource(R.drawable.finish_work);
+        else
+            img.setImageResource(R.drawable.un_finish_work);
         return convertView;
     }
 }

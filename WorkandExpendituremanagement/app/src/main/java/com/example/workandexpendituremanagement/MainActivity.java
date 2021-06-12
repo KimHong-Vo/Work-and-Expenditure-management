@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
     public void initListView(){
 
         Work[] listWork = new Work[2];
-        listWork[0] = new Work("Tập thể dục", new Time(0, 3), new Time(30, 3));
-        listWork[1] = new Work("Học trực tuyến", new Time(0, 8), new Time(30, 9));
+        listWork[0] = new Work("Tập thể dục", new Time(0, 3), new Time(30, 3), true);
+        listWork[1] = new Work("Học trực tuyến", new Time(0, 8), new Time(30, 9), false);
         WorkListAdaper adaper = new WorkListAdaper(this, 0, listWork);
         ListView lv = findViewById(R.id.work_List_View);
         lv.setAdapter(adaper);
