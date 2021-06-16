@@ -3,7 +3,8 @@ package com.example.workandexpendituremanagement;
 public class Work {
     private  String name;
     private boolean isFinish;
-    private Time startTime, endTime;
+    private Time startTime;
+    private Time endTime;
     public Work(String name, Time startTime, Time endTime, boolean isFinish){
         this.name = name;
         this.startTime = startTime;
