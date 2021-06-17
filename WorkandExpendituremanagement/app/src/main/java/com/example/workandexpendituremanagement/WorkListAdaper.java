@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.workandexpendituremanagement.model.Work;
+
 public class WorkListAdaper extends ArrayAdapter<Work> {
 
     public WorkListAdaper(@NonNull Context context, int resource, @NonNull Work[] objects) {

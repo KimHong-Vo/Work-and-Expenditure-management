@@ -3,11 +3,14 @@ package com.example.workandexpendituremanagement;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
 
+import com.example.workandexpendituremanagement.model.Date;
+import com.example.workandexpendituremanagement.model.Time;
+import com.example.workandexpendituremanagement.model.Work;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,12 +48,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initListView(){
-
         Work[] listWork = new Work[2];
-        listWork[0] = new Work("Tập thể dục", new Time(0, 3), new Time(30, 3), true);
-        listWork[1] = new Work("Học trực tuyến", new Time(0, 8), new Time(30, 9), false);
+        listWork[0] = new Work("Tập thể dục", new Time(0, 3), new Time(30, 3), true, new Date(), new Date());
+        listWork[1] = new Work("Học trực tuyến", new Time(0, 8), new Time(30, 9), false, new Date(), new Date());
         WorkListAdaper adaper = new WorkListAdaper(this, 0, listWork);
         ListView lv = findViewById(R.id.work_List_View);
         lv.setAdapter(adaper);
+    }
+
+
+    public void clickAddBtn(View addBtn) {
+        // to do some thing
     }
 }

@@ -1,4 +1,4 @@
-package com.example.workandexpendituremanagement;
+package com.example.workandexpendituremanagement.model;
 
 public class Time {
     int minute;
