@@ -33,7 +33,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\Admin\.android\avd\Pixel_3a_API_30.avd]" />
+=======
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\trung\.android\avd\Pixel_2_API_28.avd]" />
+>>>>>>> Stashed changes
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -70,8 +74,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< Updated upstream
         <option value="resourceFile" />
         <option value="Class" />
+=======
+        <option value="Class" />
+        <option value="resourceFile" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -86,15 +95,33 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+<<<<<<< Updated upstream
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
+>>>>>>> Stashed changes
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+<<<<<<< Updated upstream
     <key name="android.template.896908641">
       <recent name="com.example.workandexpendituremanagement" />
     </key>
+=======
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work-and-Expenditure-management\WorkandExpendituremanagement\app\src\main\res\drawable-xhdpi" />
+    </key>
+    <key name="android.template.896908641">
+      <recent name="com.example.workandexpendituremanagement" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work-and-Expenditure-management\WorkandExpendituremanagement\app\src\main\res\layout" />
+    </key>
+>>>>>>> Stashed changes
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -164,6 +191,12 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+<<<<<<< Updated upstream
+=======
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+>>>>>>> Stashed changes
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6b5b6ae1-ddaf-4c8a-b56b-749cb9dfa369" name="Default Changelist" comment="" />
@@ -191,14 +224,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="286" y="158" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1623807452884" />
+<<<<<<< Updated upstream
+=======
+    <state x="164" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624066898249">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="164" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1624066898249" />
+>>>>>>> Stashed changes
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1623889996497">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1623889996497" />
+<<<<<<< Updated upstream
     <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1623808872914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1623808872914" />
+=======
+    <state x="499" y="99" key="AndroidCreateResourceDirectoryDialog" timestamp="1624071670541">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="499" y="99" key="AndroidCreateResourceDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1624071670541" />
+    <state x="310" y="148" key="AndroidCreateResourceFileDialog" timestamp="1624071653518">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="310" y="148" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1624071653518" />
+    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1623808872914" />
+    <state x="699" y="86" key="FileChooserDialogImpl" timestamp="1624071731006">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="699" y="86" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1624071731006" />
+>>>>>>> Stashed changes
     <state width="1493" height="16" key="GridCell.Tab.0.bottom" timestamp="1623809124273">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -215,5 +271,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="16" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623809124272" />
+<<<<<<< Updated upstream
+=======
+    <state x="735" y="122" key="chooseDestDirectoryDialog" timestamp="1624071529872">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="735" y="122" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1624071529872" />
+>>>>>>> Stashed changes
   </component>
 </project>

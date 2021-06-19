@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#302E2E">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:background="#676666">
+
+        <Button
+            android:id="@+id/button2"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="tranparent"
+            android:drawableLeft="@drawable/abc_vector_test" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sổ chi tiêu"
+            android:textSize="35sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txtMota"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#676666"
+            android:ems="10"
+            android:hint="Tên công việc"
+            android:inputType="textPersonName"
+
+            android:padding="15dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="tranparent"
+        android:orientation="horizontal">
+        <Button
+
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:layout_marginRight="10dp"
+            android:padding="30px"
+            android:drawableLeft="@drawable/icon_trigle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="biểu tượng"
+            android:textColor="#A39595"
+            android:textSize="20sp" />
+        <Button
+
+            android:layout_width="12dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:background="#FFFFFF"
+            android:padding="30px"
+            android:drawableLeft="@drawable/icon_color" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="màu"
+            android:textColor="#A39595"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:padding="3px"
+            android:layout_weight="4"
+            android:layout_height="1dp"
+            android:background="#676666" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:padding="10px"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+           android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#676666"
+            android:layout_weight="9"
+            android:text="Mô tả chi tiết công việc" />
+
+        <View
+            android:id="@+id/view2"
+            android:padding="3px"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="4"
+            android:background="#676666" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txtMota"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#676666"
+            android:drawableStart="@drawable/icon_mota"
+            android:ems="10"
+            android:hint="Mô tả công việc"
+            android:drawablePadding="15dp"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            tools:ignore="DuplicateIds" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="0dp"
+            android:padding="3px"
+            android:layout_weight="3"
+            android:layout_height="1dp"
+            android:background="#676666" />
+
+        <TextView
+            android:padding="10px"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#676666"
+            android:layout_weight="15"
+            android:text="Tôi muốn làm công việc này vào" />
+
+        <View
+            android:padding="3px"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="3"
+            android:background="#676666" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txtMota"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#676666"
+            android:drawableStart="@drawable/icon_scheldue"
+            android:ems="10"
+            android:hint="Hôm nay, 01 tháng 6"
+            android:drawablePadding="15dp"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            tools:ignore="DuplicateIds" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <View
+            android:layout_width="0dp"
+            android:padding="3px"
+            android:layout_weight="4"
+            android:layout_height="1dp"
+            android:background="#676666" />
+
+        <TextView
+            android:padding="10px"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#676666"
+            android:layout_weight="8"
+            android:text="Thời gian kết thúc" />
+
+        <View
+            android:padding="3px"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="4"
+            android:background="#676666" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txtMota"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#676666"
+            android:drawableStart="@drawable/icon_oclock"
+            android:ems="10"
+            android:hint="Thời gian kết thúc"
+            android:drawablePadding="15dp"
+            android:inputType="textPersonName"
+            android:padding="15dp"
+            tools:ignore="DuplicateIds" />
+
+    </FrameLayout>
+
+</LinearLayout>
