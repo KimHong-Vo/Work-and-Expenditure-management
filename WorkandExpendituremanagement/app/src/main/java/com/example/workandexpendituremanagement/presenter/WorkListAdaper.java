@@ -1,4 +1,4 @@
-package com.example.workandexpendituremanagement;
+package com.example.workandexpendituremanagement.presenter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.workandexpendituremanagement.R;
 import com.example.workandexpendituremanagement.model.Work;
 
 public class WorkListAdaper extends ArrayAdapter<Work> {

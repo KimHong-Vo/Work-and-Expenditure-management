@@ -7,6 +7,10 @@ public class Time {
         this.hour = hour;
         this.minute = minute;
     }
+
+    public String toString(){
+        return hour + ":" + minute;
+    }
     public String getStringTime(){
         if (hour <10 && minute < 10){
             return "0" + hour + ":" + "0" + minute;

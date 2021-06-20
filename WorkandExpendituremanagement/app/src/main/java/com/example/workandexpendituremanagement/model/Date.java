@@ -10,4 +10,8 @@ public class Date {
         this.month = month;
         this.year = year;
     }
+
+    public String toString(){
+        return day + "-" + month +"-" +year;
+    }
 }
