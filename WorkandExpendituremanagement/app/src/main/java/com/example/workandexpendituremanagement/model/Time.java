@@ -23,4 +23,14 @@ public class Time {
         }
         return hour + ":" + minute;
     }
+
+    public boolean isEarlyThanOther(Time endTime) {
+        if(this.hour > endTime.hour)
+            return true;
+        else
+            if (this.hour < endTime.hour || this.minute < endTime.minute)
+                return false;
+            else return true;
+
+    }
 }

@@ -3,6 +3,7 @@ package com.example.workandexpendituremanagement.presenter;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -59,5 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickAddBtn(View addBtn) {
         // to do some thing
+        Intent intent = new Intent(this, AddingWorkActivity.class);
+        startActivity(intent);
     }
 }
