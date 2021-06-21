@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.WorkAndExpenditureManagement" >
-        <activity android:name="com.example.workandexpendituremanagement.MainActivity" >
+        <activity android:name="com.example.workandexpendituremanagement.presenter.AddingWorkActivity" />
+        <activity android:name="com.example.workandexpendituremanagement.presenter.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

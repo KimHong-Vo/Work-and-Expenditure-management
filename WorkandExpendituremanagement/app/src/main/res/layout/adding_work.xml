@@ -19,7 +19,7 @@
             android:padding="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="tranparent"
+            android:background="@color/material_on_background_disabled"
             android:drawableLeft="@drawable/abc_vector_test"
             android:onClick="clickCancelBtn"/>
 
@@ -58,7 +58,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="tranparent"
+        android:background="@color/material_on_background_disabled"
         android:orientation="horizontal">
         <Button
 

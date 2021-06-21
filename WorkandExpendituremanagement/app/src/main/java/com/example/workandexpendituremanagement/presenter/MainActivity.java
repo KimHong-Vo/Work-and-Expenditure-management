@@ -59,8 +59,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickAddBtn(View addBtn) {
+
         // to do some thing
-        Intent intent = new Intent(this, AddingWorkActivity.class);
+        Intent intent = new Intent(MainActivity.this, AddingWorkActivity.class);
         startActivity(intent);
     }
 }
