@@ -13,7 +13,10 @@ import com.example.workandexpendituremanagement.R;
 import com.example.workandexpendituremanagement.model.Date;
 import com.example.workandexpendituremanagement.model.Time;
 import com.example.workandexpendituremanagement.model.Work;
+import com.example.workandexpendituremanagement.model.WorkEntity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView navigationView;
@@ -50,16 +53,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initListView(){
+//        List<Work> works = WorkEntity.getWorkInDay();
+//        WorkListAdaper adaper = new WorkListAdaper(this, works);
+//        ListView lv = findViewById(R.id.work_List_View);
+//        lv.setAdapter(adaper);
+
         Work[] listWork = new Work[2];
         listWork[0] = new Work("Tập thể dục", new Time(0, 3), new Time(30, 3), true, new Date(), new Date());
         listWork[1] = new Work("Học trực tuyến", new Time(0, 8), new Time(30, 9), false, new Date(), new Date());
-        WorkListAdaper adaper = new WorkListAdaper(this, 0, listWork);
+        WorkListAdaper adaper = new WorkListAdaper(this, listWork);
         ListView lv = findViewById(R.id.work_List_View);
         lv.setAdapter(adaper);
     }
 
     public void clickAddBtn(View addBtn) {
-
         // to do some thing
         Intent intent = new Intent(MainActivity.this, AddingWorkActivity.class);
         startActivity(intent);

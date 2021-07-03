@@ -23,10 +23,14 @@ import android.widget.TimePicker;
 
 import com.example.workandexpendituremanagement.R;
 import com.example.workandexpendituremanagement.model.CategoryWork;
-import com.example.workandexpendituremanagement.model.Check;
+import com.example.workandexpendituremanagement.model.Date;
 import com.example.workandexpendituremanagement.model.SpinnerWorkAdapter;
+import com.example.workandexpendituremanagement.model.Time;
+import com.example.workandexpendituremanagement.model.Type;
 import com.example.workandexpendituremanagement.model.Work;
+import com.example.workandexpendituremanagement.model.WorkEntity;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -38,24 +42,11 @@ public class AddingWorkActivity extends AppCompatActivity  {
     TextView tvTimeBegin,tvTimeFinish,tvDateFinish,tvDateBegin,tvBtnAdd,tvNameError;
     EditText txtNameWork,txtDescription;
     Button btnError ;
-    Work work;
 //    ConnectDb db = new ConnectDb();
-    String nameWork="";
     int img =0;
     String category ="";
-    String description="";
-    int dayBegin=0;
-    int monthBegin=0;
-    int yearBegin=0;
-    int hourBegin =0;
-    int minuteBegin=0;
-    int dayFinish=0;
-    int monthFinish=0;
-    int yearFinish=0;
-    int hourFinish =0;
-    int minuteFinish=0;
-
     String [] categories = {"Công việc","Thể dục","Ăn uống","Cuộc họp"};
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,14 +54,11 @@ public class AddingWorkActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.adding_work);
 
-        work = new Work();
-
+        dialog = new Dialog(this);
 
         ivBack=findViewById(R.id.ivBack);
         txtDescription=findViewById(R.id.txtDescription);
         txtNameWork=findViewById(R.id.txtNameWork);
-
-
 
         tvBtnAdd=findViewById(R.id.tvBtnAdd);
         tvTimeBegin=findViewById(R.id.tvTimeBegin);
@@ -96,7 +84,6 @@ public class AddingWorkActivity extends AppCompatActivity  {
 
 
         //Dialog
-        final Dialog dialog= new Dialog(this);
         dialog.setContentView(R.layout.check_error);
         dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
         tvNameError=dialog.findViewById(R.id.tvNameError);
@@ -108,12 +95,6 @@ public class AddingWorkActivity extends AppCompatActivity  {
             }
         });
 
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
         tvDateBegin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -121,9 +102,6 @@ public class AddingWorkActivity extends AppCompatActivity  {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                         tvDateBegin.setText(day+" / "+(month+1)+" / "+year);
-                        dayBegin=day;
-                        monthBegin=month+1;
-                        yearBegin=year;
                     }
                 },year,month,day);
                 datePickerDialog.show();
@@ -136,9 +114,6 @@ public class AddingWorkActivity extends AppCompatActivity  {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                         tvDateFinish.setText(day+" / "+(month+1)+" / "+year);
-                        dayFinish=day;
-                        monthFinish=month+1;
-                        yearFinish=year;
                     }
                 },year,month,day);
                 datePickerDialog.show();
@@ -151,8 +126,6 @@ public class AddingWorkActivity extends AppCompatActivity  {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hour, int minute) {
                         tvTimeBegin.setText(hour+":"+minute);
-                        hourBegin=hour;
-                        minuteBegin=minute;
                     }
                 },hour,minute,true);
                 timePickerDialog.show();
@@ -165,39 +138,9 @@ public class AddingWorkActivity extends AppCompatActivity  {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hour, int minute) {
                         tvTimeFinish.setText(hour+":"+minute);
-                        hourFinish=hour;
-                        minuteFinish=minute;
                     }
                 },hour,minute,true);
                 timePickerDialog.show();
-            }
-        });
-        tvBtnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                nameWork=String.valueOf(txtNameWork.getText());
-                description=String.valueOf(txtDescription.getText());
-                Check check= new Check();
-                if(check.checkName(String.valueOf(txtNameWork.getText()))){
-                    if(check.checkDate(dayBegin,monthBegin,yearBegin) && check.checkDate(dayFinish,monthFinish,yearFinish)){
-                        returnMainacitvity();
-                    }else if(check.checkDateEqual(dayBegin,monthBegin,yearBegin)&& check.checkDateEqual(dayFinish,monthFinish,yearFinish))
-                        if(check.checkTime(hourBegin,minuteBegin)&& check.checkTime(hourFinish,minuteFinish)){
-                            returnMainacitvity();
-                        }else{
-                            tvNameError.setText("Bạn chọn sai giờ hoặc phút");
-                            dialog.show();
-                        }
-                    else{
-                        tvNameError.setText("Bạn chọn sai ngày hoặc tháng hoặc năm");
-                        dialog.show();
-                    }
-                }else{
-                    tvNameError.setText("Tên công việc không được để trống");
-                    dialog.show();
-                }
-
-
             }
         });
 
@@ -213,29 +156,58 @@ public class AddingWorkActivity extends AppCompatActivity  {
 
             }
         });
-
-
-    }
-    public void returnMainacitvity(){
-        Intent data = new Intent();
-        data.putExtra("NAME_WORK",nameWork);
-        data.putExtra("IMG",img);
-        data.putExtra("CATEGORY",category);
-        data.putExtra("DESCRIPTION",description);
-        data.putExtra("DAYBEGIN",dayBegin);
-        data.putExtra("MONTHBEGIN",monthBegin);
-        data.putExtra("YEARBEGIN",yearBegin);
-        data.putExtra("HOURBEGIN",hourBegin);
-        data.putExtra("MINUTEBEGIN",minuteBegin);
-        data.putExtra("DAYFINISH",dayFinish);
-        data.putExtra("MONTHFINISH",monthFinish);
-        data.putExtra("YEARFINISH",yearFinish);
-        data.putExtra("HOURFINISH",hourFinish);
-        data.putExtra("MINUTE",minuteFinish);
-        setResult(Activity.RESULT_OK,data);
-        finish();
     }
 
+    public void clickAddBtn(View view) {
+        String name = txtNameWork.getText().toString();
+        String discription = txtDescription.getText().toString();
+        String[] startStringDate = tvDateBegin.getText().toString().split("/");
+        Date startDate = new Date(Integer.parseInt(startStringDate[0].trim()), Integer.parseInt(startStringDate[1].trim()), Integer.parseInt(startStringDate[2].trim()));
+        String[] endStringDate = tvDateFinish.getText().toString().split("/");
+        Date endDate = new Date(Integer.parseInt(endStringDate[0].trim()), Integer.parseInt(endStringDate[1].trim()), Integer.parseInt(endStringDate[2].trim()));
+        String[] startStringTime = tvTimeBegin.getText().toString().split(":");
+        Time startTime = new Time(Integer.parseInt(startStringTime[0].trim()),Integer.parseInt(startStringTime[1].trim()));
+        String[] endStringTime = tvTimeBegin.getText().toString().split(":");
+        Time endTime = new Time(Integer.parseInt(endStringTime[0].trim()),Integer.parseInt(endStringTime[1].trim()));
 
+        if(checkWorkInfor(name, discription, startDate, startTime, endDate,endTime)){
+            Work work = new Work(name, startTime, endTime, false, startDate, endDate, null);
+            if(WorkEntity.addWork(work)){
+                startActivity(new Intent(this, MainActivity.class));
+            }
+            else{
+                tvNameError.setText("Thêm công việc thất bại");
+                dialog.show();
+            }
+        }
 
+    }
+
+    public boolean checkWorkInfor(String workName, String discription, Date startDate, Time startTime, Date endDate, Time endTime) {
+//        to do something
+        String stringError = "";
+
+        if (workName == null || workName.equals(""))
+            stringError += "Tên công việc trống!!";
+
+        if (!startDate.checkDate() && !endDate.checkDate())
+             stringError += "\n" + "Bạn chọn ngày tháng sai!!";
+
+        if(endDate.isEarlyThanOther(startDate) || endDate.isEqualOther(startDate))
+            stringError += "\n" + "Ngày bắt đầu phải cùng hoặc sau ngày kết thúc";
+
+        if(endDate.isEqualOther(startDate) && endTime.isEarlyThanOther(startTime))
+            stringError += "\n" + "Giờ bắt đầu phải trước giờ kết thúc";
+        if(stringError.equals(""))
+            return true;
+        else {
+            tvNameError.setText(stringError);
+            dialog.show();
+            return false;
+        }
+    }
+
+    public void clickCancelBtn(View view) {
+                finish();
+    }
 }

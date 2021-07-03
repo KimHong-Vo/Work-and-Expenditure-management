@@ -1,5 +1,7 @@
 package com.example.workandexpendituremanagement.model;
 
+import java.util.Calendar;
+
 public class Date {
     private int day;
     private  int month;
@@ -14,13 +16,14 @@ public class Date {
     public boolean isEarlyThanOther(Date date){
         if(this.year < date.year)
             return true;
-        else
+        else {
             if (this.year > date.year)
                 return false;
-            if(this.month<date.month)
+            if (this.month < date.month)
                 return true;
             else
                 return (this.month == date.month && this.day < date.day);
+        }
     }
 
     public boolean isEqualOther(Date other){
@@ -29,5 +32,14 @@ public class Date {
 
     public String toString(){
         return day + "-" + month +"-" +year;
+    }
+
+    public boolean checkDate(){
+//        is this date later than current date
+        Calendar c = Calendar.getInstance();
+        Date currentDate = new Date(c.get(Calendar.DAY_OF_MONTH),c.get(Calendar.MONTH)+1, c.get(Calendar.YEAR));
+        System.out.println("Curent date to compare : " + currentDate.toString() );
+        return (isEqualOther(currentDate) || !isEarlyThanOther(currentDate));
+
     }
 }

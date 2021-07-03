@@ -16,8 +16,8 @@ import com.example.workandexpendituremanagement.model.Work;
 
 public class WorkListAdaper extends ArrayAdapter<Work> {
 
-    public WorkListAdaper(@NonNull Context context, int resource, @NonNull Work[] objects) {
-        super(context, resource, objects);
+    public WorkListAdaper(@NonNull Context context, @NonNull Work[] objects) {
+        super(context, 0, objects);
     }
 
     @NonNull

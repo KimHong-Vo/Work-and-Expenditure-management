@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:src="@drawable/icon_return"
+            android:onClick="clickCancelBtn"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -38,7 +39,8 @@
             android:layout_marginRight="10dp"
             android:textColor="@android:color/holo_red_dark"
             android:layout_gravity="right|center_vertical"
-            android:text="ADD"/>
+            android:text="ADD"
+            android:onClick="clickAddBtn"/>
     </FrameLayout>
 
     <LinearLayout
