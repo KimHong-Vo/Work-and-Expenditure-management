@@ -3,255 +3,228 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center"
-    android:background="#302E2E">
+    android:layout_height="match_parent"
+    tools:context=".presenter.AddingWorkActivity">
+
 
     <FrameLayout
+        android:background="@color/teal_200"
         android:layout_width="match_parent"
-        android:layout_marginBottom="10dp"
         android:layout_height="wrap_content"
-        android:background="#676666">
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
 
-        <Button
-            android:id="@+id/cancel_button"
-            android:padding="5dp"
+        <ImageView
+            android:id="@+id/ivBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/material_on_background_disabled"
-            android:drawableLeft="@drawable/abc_vector_test"
-            android:onClick="clickCancelBtn"/>
+            android:layout_gravity="left"
+            android:src="@drawable/icon_return"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:layout_gravity="center"
+            android:text="Thêm công việc"/>
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/tvBtnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Sổ chi tiêu"
-            android:textSize="35sp" />
-
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_gravity="right|center_vertical"
+            android:text="ADD"/>
     </FrameLayout>
 
-    <FrameLayout
-        android:layout_marginTop="15dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginBottom="15dp"
-        android:layout_height="wrap_content">
-
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="match_parent">
         <EditText
-            android:id="@+id/txtTen"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#676666"
-            android:ems="10"
+            android:id="@+id/txtNameWork"
+            android:inputType="text"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_edittext"
             android:hint="Tên công việc"
-            android:inputType="textPersonName"
-
-            android:padding="15dp" />
-
-    </FrameLayout>
-
-    <LinearLayout
-        android:padding="20dp"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/material_on_background_disabled"
-        android:orientation="horizontal">
-        <Button
-
-            android:layout_width="12dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:layout_marginRight="10dp"
-            android:padding="30px"
-            android:drawableLeft="@drawable/icon_trigle" />
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:padding="14dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="biểu tượng"
-            android:textColor="#A39595"
-            android:textSize="20sp" />
-        <Button
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
 
-            android:layout_width="12dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Chọn loại công việc" />
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="10dp"
-            android:background="#FFFFFF"
-            android:padding="30px"
-            android:drawableLeft="@drawable/icon_color" />
-        <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/spinnerCategory"/>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="màu"
-            android:textColor="#A39595"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
 
-    <LinearLayout
-        android:gravity="center"
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Mô tả chi tiết công việc" />
 
+            <View
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="0dp"
-            android:padding="3px"
-            android:layout_weight="4"
-            android:layout_height="1dp"
-            android:background="#676666" />
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
 
-        <TextView
-            android:id="@+id/textView6"
-            android:padding="10px"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-           android:gravity="center"
-            android:textSize="18sp"
-            android:textColor="#676666"
-            android:layout_weight="9"
-            android:text="Mô tả chi tiết công việc" />
-
-        <View
-            android:id="@+id/view2"
-            android:padding="3px"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="4"
-            android:background="#676666" />
-    </LinearLayout>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        </LinearLayout>
         <EditText
-            android:id="@+id/txtMota"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#676666"
-            android:drawableStart="@drawable/icon_mota"
-            android:ems="10"
+            android:id="@+id/txtDescription"
+            android:background="@drawable/background_edittext"
             android:hint="Mô tả công việc"
-            android:drawablePadding="15dp"
-            android:inputType="textPersonName"
-            android:padding="15dp"
-            tools:ignore="DuplicateIds" />
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/icon_spending"
+            android:drawablePadding="10dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
 
-    </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Thời gian bắt đầu công việc" />
 
-    <LinearLayout
-        android:gravity="center"
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <View
 
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
 
-        <View
-            android:layout_width="0dp"
-            android:padding="3px"
-            android:layout_weight="3"
-            android:layout_height="1dp"
-            android:background="#676666" />
-
+        </LinearLayout>
         <TextView
-            android:padding="10px"
-            android:layout_width="0dp"
+            android:id="@+id/tvDateBegin"
+            android:background="@drawable/background_edittext"
+            android:hint="Hôm nay, 1 tháng 6"
+            android:layout_width="match_parent"
+            android:drawableStart="@drawable/icon_schedule"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textColor="#676666"
-            android:layout_weight="15"
-            android:text="Tôi muốn làm công việc này vào" />
-
-        <View
-            android:padding="3px"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="3"
-            android:background="#676666" />
-    </LinearLayout>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/txtStartDate"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#676666"
-            android:drawableStart="@drawable/icon_scheldue"
-            android:ems="10"
-            android:hint="Hôm nay, 01 tháng 6"
-            android:drawablePadding="15dp"
-            android:inputType="textPersonName"
-            android:padding="15dp"
-            tools:ignore="DuplicateIds" />
-
-    </FrameLayout>
-
-    <LinearLayout
-        android:gravity="center"
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <View
-            android:layout_width="0dp"
-            android:padding="3px"
-            android:layout_weight="4"
-            android:layout_height="1dp"
-            android:background="#676666" />
-
+            android:padding="14dp"/>
         <TextView
-            android:padding="10px"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:textColor="#676666"
-            android:layout_weight="8"
-            android:text="Thời gian kết thúc" />
-
-        <View
-            android:padding="3px"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="4"
-            android:background="#676666" />
-    </LinearLayout>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/txtMota"
-            android:layout_width="360dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#676666"
+            android:id="@+id/tvTimeBegin"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_edittext"
+            android:hint="Thời gian bắt đầu"
+            android:layout_width="match_parent"
             android:drawableStart="@drawable/icon_oclock"
-            android:ems="10"
-            android:hint="Thời gian kết thúc"
-            android:drawablePadding="15dp"
-            android:inputType="textPersonName"
-            android:padding="15dp"
-            tools:ignore="DuplicateIds" />
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
 
-    </FrameLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Thời gian kết thúc công việc" />
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvDateFinish"
+            android:background="@drawable/background_edittext"
+            android:hint="Hôm nay, 1 tháng 6"
+            android:layout_width="match_parent"
+            android:drawableStart="@drawable/icon_schedule"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+        <TextView
+            android:id="@+id/tvTimeFinish"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_edittext"
+            android:hint="Thời gian kết thúc"
+            android:layout_width="match_parent"
+            android:drawableStart="@drawable/icon_oclock"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+    </LinearLayout>
 
 </LinearLayout>

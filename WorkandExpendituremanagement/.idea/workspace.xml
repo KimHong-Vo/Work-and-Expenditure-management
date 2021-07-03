@@ -8,150 +8,56 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b5b6ae1-ddaf-4c8a-b56b-749cb9dfa369" name="Default Changelist" comment="" />
+    <list default="true" id="b5920d10-61e4-4f56-ae3e-8a55547b6cfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/workandexpendituremanagement/model/CategoryWork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/workandexpendituremanagement/model/Check.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/workandexpendituremanagement/model/SpinnerWorkAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/background_edittext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_eat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_excercise.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_listspending.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_listwork.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_meet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_return.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_schedule.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/icon_spending.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/check_error.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/spinner_work.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/workandexpendituremanagement/presenter/AddingWorkActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/workandexpendituremanagement/presenter/AddingWorkActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/adding_work.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/adding_work.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\Admin\.android\avd\Pixel_3a_API_30.avd]" />
-=======
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\trung\.android\avd\Pixel_2_API_28.avd]" />
->>>>>>> Stashed changes
-=======
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\trung\.android\avd\Pixel_2_API_28.avd]" />
->>>>>>> Stashed changes
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Work and Expenditure management" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Work and Expenditure management" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Work and Expenditure management" type="f1a62948:ProjectNode" />
-                <item name="app" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        <option value="resourceFile" />
-        <option value="Class" />
-=======
-        <option value="Class" />
-        <option value="resourceFile" />
->>>>>>> Stashed changes
-=======
-        <option value="Class" />
-        <option value="resourceFile" />
->>>>>>> Stashed changes
-      </list>
-    </option>
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\trung\.android\avd\Pixel_XL_API_27.avd]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1u0dtSTK2p8KrW3AO3d6s98z1kn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1un009hibekqR5KiJwOKyWbRged" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-=======
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
->>>>>>> Stashed changes
-=======
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
->>>>>>> Stashed changes
-    <property name="project.structure.last.edited" value="Dependencies" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
   </component>
   <component name="RecentsManager">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <key name="android.template.896908641">
-      <recent name="com.example.workandexpendituremanagement" />
-    </key>
-=======
-=======
->>>>>>> Stashed changes
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Work-and-Expenditure-management\WorkandExpendituremanagement\app\src\main\res\drawable-xhdpi" />
-    </key>
-    <key name="android.template.896908641">
-      <recent name="com.example.workandexpendituremanagement" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Work-and-Expenditure-management\WorkandExpendituremanagement\app\src\main\res\layout" />
+      <recent name="D:\Work-and-Expenditure-management\WorkandExpendituremanagement\app\src\main\java\com\example\workandexpendituremanagement\presenter" />
+      <recent name="D:\Work-and-Expenditure-management\WorkandExpendituremanagement\app\src\main\res\drawable-xhdpi" />
+      <recent name="D:\Work-and-Expenditure-management\WorkandExpendituremanagement\app\src\main\java\com\example\workandexpendituremanagement\model" />
     </key>
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
   </component>
   <component name="RunManager">
-    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Work_and_Expenditure_management.app" />
       <option name="DEPLOY" value="true" />
@@ -212,116 +118,24 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
->>>>>>> Stashed changes
-=======
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
->>>>>>> Stashed changes
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6b5b6ae1-ddaf-4c8a-b56b-749cb9dfa369" name="Default Changelist" comment="" />
-      <created>1623806655077</created>
+      <changelist id="b5920d10-61e4-4f56-ae3e-8a55547b6cfa" name="Default Changelist" comment="" />
+      <created>1625285820349</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1623806655077</updated>
+      <updated>1625285820349</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="286" y="158" key="#PSD" timestamp="1623807452884">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="286" y="158" key="#PSD/0.0.1536.824@0.0.1536.824" timestamp="1623807452884" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-    <state x="164" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624066898249">
+    <state x="309" y="42" key="#Inspections" timestamp="1625286279506">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="164" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1624066898249" />
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1623889996497">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1623889996497" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1623808872914">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1623808872914" />
-=======
-=======
->>>>>>> Stashed changes
-    <state x="499" y="99" key="AndroidCreateResourceDirectoryDialog" timestamp="1624071670541">
+    <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1625286279506" />
+    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1625286137639">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="499" y="99" key="AndroidCreateResourceDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1624071670541" />
-    <state x="310" y="148" key="AndroidCreateResourceFileDialog" timestamp="1624071653518">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="310" y="148" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1624071653518" />
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1623808872914" />
-    <state x="699" y="86" key="FileChooserDialogImpl" timestamp="1624071731006">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="699" y="86" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1624071731006" />
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    <state width="1493" height="16" key="GridCell.Tab.0.bottom" timestamp="1623809124273">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="16" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623809124273" />
-    <state width="1493" height="16" key="GridCell.Tab.0.center" timestamp="1623809124271">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="16" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623809124271" />
-    <state width="1493" height="16" key="GridCell.Tab.0.left" timestamp="1623809124271">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="16" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623809124271" />
-    <state width="1493" height="16" key="GridCell.Tab.0.right" timestamp="1623809124272">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="16" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623809124272" />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-    <state x="735" y="122" key="chooseDestDirectoryDialog" timestamp="1624071529872">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="735" y="122" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1624071529872" />
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1625286137639" />
   </component>
 </project>
