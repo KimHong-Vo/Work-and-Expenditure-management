@@ -1,0 +1,39 @@
+com/example/workandexpendituremanagement/model/Type.java
+ com.example.workandexpendituremanagement.model.Type
+com/example/workandexpendituremanagement/model/Check.java
+ com.example.workandexpendituremanagement.model.Check
+com/example/workandexpendituremanagement/model/WorkEntity.java
+ com.example.workandexpendituremanagement.model.WorkEntity
+com/example/workandexpendituremanagement/model/ConnectDB.java
+ com.example.workandexpendituremanagement.model.ConnectDB
+com/example/workandexpendituremanagement/model/Time.java
+ com.example.workandexpendituremanagement.model.Time
+com/example/workandexpendituremanagement/presenter/MainActivity.java
+ com.example.workandexpendituremanagement.presenter.MainActivity
+ com.example.workandexpendituremanagement.presenter.MainActivity$1
+com/example/workandexpendituremanagement/model/Date.java
+ com.example.workandexpendituremanagement.model.Date
+com/example/workandexpendituremanagement/BuildConfig.java
+ com.example.workandexpendituremanagement.BuildConfig
+com/example/workandexpendituremanagement/model/CategoryWork.java
+ com.example.workandexpendituremanagement.model.CategoryWork
+com/example/workandexpendituremanagement/presenter/WorkListAdaper.java
+ com.example.workandexpendituremanagement.presenter.WorkListAdaper
+com/example/workandexpendituremanagement/presenter/AddingWorkActivity.java
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$1
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$2
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$3
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$3$1
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$4
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$4$1
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$5
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$5$1
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$6
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$6$1
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$7
+ com.example.workandexpendituremanagement.presenter.AddingWorkActivity$8
+com/example/workandexpendituremanagement/model/Work.java
+ com.example.workandexpendituremanagement.model.Work
+com/example/workandexpendituremanagement/model/SpinnerWorkAdapter.java
+ com.example.workandexpendituremanagement.model.SpinnerWorkAdapter

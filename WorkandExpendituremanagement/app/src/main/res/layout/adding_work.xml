@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".presenter.AddingWorkActivity">
+
+
+    <FrameLayout
+        android:background="@color/teal_200"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/icon_return"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:layout_gravity="center"
+            android:text="Thêm công việc"/>
+
+        <TextView
+            android:id="@+id/tvBtnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_gravity="right|center_vertical"
+            android:text="Hoàn thành"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/txtNameWork"
+            android:inputType="text"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_edittext"
+            android:hint="Tên công việc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Chọn loại công việc" />
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerCategory"/>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Mô tả chi tiết công việc" />
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/txtDescription"
+            android:background="@drawable/background_edittext"
+            android:hint="Mô tả công việc"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/icon_spending"
+            android:drawablePadding="10dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Thời gian bắt đầu công việc" />
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvDateBegin"
+            android:drawableLeft="@drawable/icon_schedule"
+            android:background="@drawable/background_edittext"
+            android:hint="Hôm nay, 1 tháng 6"
+            android:layout_width="match_parent"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+        <TextView
+            android:id="@+id/tvTimeBegin"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_edittext"
+            android:hint="Thời gian bắt đầu"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/icon_oclock"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <View
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Thời gian kết thúc công việc" />
+
+            <View
+
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/teal_200"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvDateFinish"
+            android:background="@drawable/background_edittext"
+            android:hint="Hôm nay, 1 tháng 6"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/icon_schedule"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+        <TextView
+            android:id="@+id/tvTimeFinish"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_edittext"
+            android:hint="Thời gian kết thúc"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/icon_oclock"
+            android:drawablePadding="10dp"
+            android:textSize="17sp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"/>
+    </LinearLayout>
+
+</LinearLayout>
