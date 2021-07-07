@@ -2,12 +2,15 @@ package com.example.workandexpendituremanagement.model;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConnectDB extends SQLiteOpenHelper {
@@ -103,8 +106,30 @@ public class ConnectDB extends SQLiteOpenHelper {
     }
 
     public List<Work> selectWorkInday(){
-        //to do some thing
-        return null;
+        List<Work> workList = new ArrayList<>();
+        String sql="SELECT * FROM Time t JOIN Work w ON t.id=w.id JOIN Type t1 ON w.idType=w.id";
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor=db.rawQuery(sql,null);
+        if(cursor.moveToFirst()){
+            do{
+                int id = cursor.getInt(0);
+                String[] startTimeString = cursor.getString(1).split(":");
+                Time startTime = new Time(Integer.parseInt(startTimeString[0]), Integer.parseInt(startTimeString[2]));
+                Date dateStart = new Date (Integer.parseInt(cursor.getString(2).split("/")[0]),Integer.parseInt(cursor.getString(2).split("/")[1]),Integer.parseInt(cursor.getString(2).split("/")[2]));
+                Time endTime  =  new Time (Integer.parseInt(cursor.getString(3).split(":")[0]),Integer.parseInt(cursor.getString(3).split(":")[1]));
+                Date dateEnd = new Date (Integer.parseInt(cursor.getString(4).split("/")[0]),Integer.parseInt(cursor.getString(4).split("/")[1]),Integer.parseInt(cursor.getString(4).split("/")[2]));
+                String name = cursor.getString(5);
+                String description = cursor.getString(6);
+             Type type = new Type(cursor.getInt(7),cursor.getString(8));
+                Work work = new Work( name,  startTime,  endTime, true ,  dateStart,  dateEnd,  type);
+                workList.add(work);
+            }while (cursor.moveToFirst());
+        }else{
+
+        }
+        cursor.close();
+        db.close();
+        return workList;
     }
 
     public String doCreateTypeTable(){

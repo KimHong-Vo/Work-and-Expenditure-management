@@ -172,8 +172,8 @@ public class AddingWorkActivity extends AppCompatActivity  {
 
         if(checkWorkInfor(name, discription, startDate, startTime, endDate,endTime)){
             Work work = new Work(name, startTime, endTime, false, startDate, endDate, null);
-            if(WorkEntity.addWork(work)){
-                startActivity(new Intent(this, MainActivity.class));
+            if(WorkEntity.addWork(work,this)){
+               finish();
             }
             else{
                 tvNameError.setText("Thêm công việc thất bại");
