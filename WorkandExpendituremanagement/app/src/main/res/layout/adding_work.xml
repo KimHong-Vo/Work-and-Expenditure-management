@@ -159,7 +159,7 @@
         <TextView
             android:id="@+id/tvDateBegin"
             android:background="@drawable/background_edittext"
-            android:hint="Hôm nay, 1 tháng 6"
+            android:hint="d/m/y"
             android:layout_width="match_parent"
             android:drawableStart="@drawable/icon_schedule"
             android:drawablePadding="10dp"
@@ -209,7 +209,7 @@
         <TextView
             android:id="@+id/tvDateFinish"
             android:background="@drawable/background_edittext"
-            android:hint="Hôm nay, 1 tháng 6"
+            android:hint="d/m/y"
             android:layout_width="match_parent"
             android:drawableStart="@drawable/icon_schedule"
             android:drawablePadding="10dp"

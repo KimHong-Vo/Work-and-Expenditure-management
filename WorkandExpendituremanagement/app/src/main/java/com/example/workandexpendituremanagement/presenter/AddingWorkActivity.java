@@ -22,11 +22,11 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.example.workandexpendituremanagement.R;
-import com.example.workandexpendituremanagement.model.CategoryWork;
 import com.example.workandexpendituremanagement.model.Date;
 import com.example.workandexpendituremanagement.model.SpinnerWorkAdapter;
 import com.example.workandexpendituremanagement.model.Time;
 import com.example.workandexpendituremanagement.model.Type;
+import com.example.workandexpendituremanagement.model.TypeEntity;
 import com.example.workandexpendituremanagement.model.Work;
 import com.example.workandexpendituremanagement.model.WorkEntity;
 
@@ -36,7 +36,6 @@ import java.util.Calendar;
 
 public class AddingWorkActivity extends AppCompatActivity  {
     ImageView ivBack;
-    ArrayList<CategoryWork> list;
     AppCompatSpinner spinner;
     SpinnerWorkAdapter adapter;
     TextView tvTimeBegin,tvTimeFinish,tvDateFinish,tvDateBegin,tvBtnAdd,tvNameError;
@@ -66,9 +65,9 @@ public class AddingWorkActivity extends AppCompatActivity  {
         tvDateBegin=findViewById(R.id.tvDateBegin);
         tvDateFinish=findViewById(R.id.tvDateFinish);
 
-        list = CategoryWork.categoryWorkArrayList();
+
         spinner=findViewById(R.id.spinnerCategory);
-        adapter = new SpinnerWorkAdapter(list);
+        adapter = new SpinnerWorkAdapter(TypeEntity.getType(this));
         spinner.setAdapter(adapter);
 
 
@@ -144,34 +143,35 @@ public class AddingWorkActivity extends AppCompatActivity  {
             }
         });
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                category=categories[i];
-                img=i;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
     }
 
     public void clickAddBtn(View view) {
+//        get input infor
         String name = txtNameWork.getText().toString();
         String discription = txtDescription.getText().toString();
+        Date startDate = null,endDate = null;
+        Time startTime = null, endTime = null;
+
         String[] startStringDate = tvDateBegin.getText().toString().split("/");
-        Date startDate = new Date(Integer.parseInt(startStringDate[0].trim()), Integer.parseInt(startStringDate[1].trim()), Integer.parseInt(startStringDate[2].trim()));
+        if(startStringDate.length==3) {
+            startDate = new Date(Integer.parseInt(startStringDate[0].trim()), Integer.parseInt(startStringDate[1].trim()), Integer.parseInt(startStringDate[2].trim()));
+        }
         String[] endStringDate = tvDateFinish.getText().toString().split("/");
-        Date endDate = new Date(Integer.parseInt(endStringDate[0].trim()), Integer.parseInt(endStringDate[1].trim()), Integer.parseInt(endStringDate[2].trim()));
+        if(endStringDate.length==3) {
+            endDate = new Date(Integer.parseInt(endStringDate[0].trim()), Integer.parseInt(endStringDate[1].trim()), Integer.parseInt(endStringDate[2].trim()));
+        }
         String[] startStringTime = tvTimeBegin.getText().toString().split(":");
-        Time startTime = new Time(Integer.parseInt(startStringTime[0].trim()),Integer.parseInt(startStringTime[1].trim()));
-        String[] endStringTime = tvTimeBegin.getText().toString().split(":");
-        Time endTime = new Time(Integer.parseInt(endStringTime[0].trim()),Integer.parseInt(endStringTime[1].trim()));
+        if(startStringTime.length==2) {
+            startTime = new Time(Integer.parseInt(startStringTime[0].trim()), Integer.parseInt(startStringTime[1].trim()));
+        }
+        String[] endStringTime = tvTimeFinish.getText().toString().split(":");
+        if (endStringTime.length==2)
+            endTime = new Time(Integer.parseInt(endStringTime[0].trim()),Integer.parseInt(endStringTime[1].trim()));
+        Type type = (Type) adapter.getTypeList().get(spinner.getSelectedItemPosition());
 
         if(checkWorkInfor(name, discription, startDate, startTime, endDate,endTime)){
-            Work work = new Work(name, startTime, endTime, false, startDate, endDate, null);
+            Work work = new Work(name, startTime, endTime, false, startDate, endDate, type);
+            work.setDescription(discription);
             if(WorkEntity.addWork(work,this)){
                finish();
             }
@@ -188,16 +188,21 @@ public class AddingWorkActivity extends AppCompatActivity  {
         String stringError = "";
 
         if (workName == null || workName.equals(""))
-            stringError += "Tên công việc trống!!";
+            stringError += "Tên công việc trống!! \n";
 
-        if (!startDate.checkDate() && !endDate.checkDate())
-             stringError += "\n" + "Bạn chọn ngày tháng sai!!";
-
-        if(endDate.isEarlyThanOther(startDate) || endDate.isEqualOther(startDate))
-            stringError += "\n" + "Ngày bắt đầu phải cùng hoặc sau ngày kết thúc";
-
-        if(endDate.isEqualOther(startDate) && endTime.isEarlyThanOther(startTime))
-            stringError += "\n" + "Giờ bắt đầu phải trước giờ kết thúc";
+        if(startDate==null|| endDate == null || startTime == null || endTime == null){
+            stringError +="Chưa nhập đủ thời gian, ngày tháng \n";
+        }
+        else{
+            if (!startDate.checkDate() && !endDate.checkDate())
+                stringError +="Bạn chọn ngày tháng sai!! \n";
+            if(endDate.isEarlyThanOther(startDate))
+                stringError += "Ngày bắt đầu phải cùng hoặc sau ngày kết thúc \n";
+            else if (endDate.isEqualOther(startDate)){
+                if (endTime.isEarlyThanOther(startTime))
+                    stringError += "Giờ bắt đầu phải trước giờ kết thúc \n";
+            }
+        }
         if(stringError.equals(""))
             return true;
         else {

@@ -11,18 +11,19 @@ import android.widget.TextView;
 import com.example.workandexpendituremanagement.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SpinnerWorkAdapter extends BaseAdapter {
-ArrayList<CategoryWork> list;
-Context context;
+private List<Type> typeList;
+private Context context;
 
-    public SpinnerWorkAdapter(ArrayList<CategoryWork> list) {
-        this.list = list;
+    public SpinnerWorkAdapter(List<Type> list) {
+        this.typeList = list;
     }
 
     @Override
     public int getCount() {
-        return list.size();
+        return typeList.size();
     }
 
     @Override
@@ -37,15 +38,27 @@ Context context;
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        CategoryWork categoryWork = list.get(i);
         view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.spinner_work,viewGroup,false);
+
+        Type type = typeList.get(i);
 
         ImageView ivCategory = view.findViewById(R.id.ivCategory);
         TextView tvCategory = view.findViewById(R.id.tvNameWorkCategory);
 
-        ivCategory.setImageResource(categoryWork.getImg());
-        tvCategory.setText(categoryWork.getName());
+        switch (type.getId()){
+            case 1 :  ivCategory.setImageResource(R.drawable.icon_work); break;
+            case 2 :  ivCategory.setImageResource(R.drawable.icon_excercise); break;
+            case 3 :  ivCategory.setImageResource(R.drawable.icon_eat); break;
+            case 4 :  ivCategory.setImageResource(R.drawable.icon_meet); break;
+            default: ivCategory.setImageResource(R.drawable.icon_work); break;
+        }
+
+        tvCategory.setText(type.getName());
 
         return view;
+    }
+
+    public List<Type> getTypeList(){
+        return this.typeList;
     }
 }

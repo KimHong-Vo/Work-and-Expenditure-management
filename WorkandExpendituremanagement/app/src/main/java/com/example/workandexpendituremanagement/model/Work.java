@@ -78,4 +78,8 @@ public class Work {
     public boolean getIsfinish(){
         return  isFinish;
     }
+
+    public void setDescription(String d){
+        this.description = d;
+    }
 }

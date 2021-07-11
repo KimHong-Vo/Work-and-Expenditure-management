@@ -3,7 +3,7 @@ package com.example.workandexpendituremanagement.model;
 public class Time {
     int minute;
     int hour;
-    public Time( int minute, int hour){
+    public Time( int hour, int minute){
         this.hour = hour;
         this.minute = minute;
     }
@@ -25,12 +25,12 @@ public class Time {
     }
 
     public boolean isEarlyThanOther(Time endTime) {
-        if(this.hour > endTime.hour)
+        if(this.hour < endTime.hour)
             return true;
         else
-            if (this.hour < endTime.hour || this.minute < endTime.minute)
+            if (this.hour > endTime.hour || this.minute > endTime.minute)
                 return false;
-            else return true;
+            return true;
 
     }
 }
