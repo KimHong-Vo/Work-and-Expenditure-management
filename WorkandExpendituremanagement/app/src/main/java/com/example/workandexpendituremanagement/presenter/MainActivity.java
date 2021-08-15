@@ -56,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initListView();
+    }
+
     public void initListView(){
         List<Work> works = WorkEntity.getWorkInDay(this);
         WorkListAdaper adaper = new WorkListAdaper(this, works);

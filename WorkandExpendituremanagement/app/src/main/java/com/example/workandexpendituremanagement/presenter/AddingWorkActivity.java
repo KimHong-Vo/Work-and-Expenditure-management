@@ -3,21 +3,16 @@ package com.example.workandexpendituremanagement.presenter;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatSpinner;
 
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -30,21 +25,15 @@ import com.example.workandexpendituremanagement.model.TypeEntity;
 import com.example.workandexpendituremanagement.model.Work;
 import com.example.workandexpendituremanagement.model.WorkEntity;
 
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 public class AddingWorkActivity extends AppCompatActivity  {
     ImageView ivBack;
     AppCompatSpinner spinner;
     SpinnerWorkAdapter adapter;
-    TextView tvTimeBegin,tvTimeFinish,tvDateFinish,tvDateBegin,tvBtnAdd,tvNameError;
+    TextView tvTimeBegin,tvTimeFinish,tvDateFinish,tvDateBegin,tvNameError;
     EditText txtNameWork,txtDescription;
-    Button btnError ;
-//    ConnectDb db = new ConnectDb();
-    int img =0;
-    String category ="";
-    String [] categories = {"Công việc","Thể dục","Ăn uống","Cuộc họp"};
+    Button btnError, btnAdd ;
     Dialog dialog;
 
     @Override
@@ -59,19 +48,15 @@ public class AddingWorkActivity extends AppCompatActivity  {
         txtDescription=findViewById(R.id.txtDescription);
         txtNameWork=findViewById(R.id.txtNameWork);
 
-        tvBtnAdd=findViewById(R.id.tvBtnAdd);
+        btnAdd =findViewById(R.id.tvBtnAdd);
         tvTimeBegin=findViewById(R.id.tvTimeBegin);
         tvTimeFinish=findViewById(R.id.tvTimeFinish);
         tvDateBegin=findViewById(R.id.tvDateBegin);
         tvDateFinish=findViewById(R.id.tvDateFinish);
 
-
         spinner=findViewById(R.id.spinnerCategory);
         adapter = new SpinnerWorkAdapter(TypeEntity.getType(this));
         spinner.setAdapter(adapter);
-
-
-
 
         final Calendar c= Calendar.getInstance();
         final int year = c.get(Calendar.YEAR);
@@ -79,8 +64,6 @@ public class AddingWorkActivity extends AppCompatActivity  {
         final int day=c.get(Calendar.DAY_OF_MONTH);
         final int hour = c.get(Calendar.HOUR_OF_DAY);
         final int minute =c.get(Calendar.MINUTE);
-
-
 
         //Dialog
         dialog.setContentView(R.layout.check_error);
