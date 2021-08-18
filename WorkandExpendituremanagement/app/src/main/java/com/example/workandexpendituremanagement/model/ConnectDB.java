@@ -11,6 +11,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class ConnectDB extends SQLiteOpenHelper {
@@ -103,6 +104,10 @@ public class ConnectDB extends SQLiteOpenHelper {
             return false;
         }
     }
+    final Calendar c= Calendar.getInstance();
+    final int year = c.get(Calendar.YEAR);
+    final int month=c.get(Calendar.MONTH);
+    final int day=c.get(Calendar.DAY_OF_MONTH);
 
     public List<Work> selectWorkInday(){
         List<Work> workList = new ArrayList<>();
@@ -111,17 +116,23 @@ public class ConnectDB extends SQLiteOpenHelper {
         Cursor cursor=db.rawQuery(sql,null);
         if(cursor.moveToFirst()){
             do{
-                int id = cursor.getInt(0);
-                String[] startTimeString = cursor.getString(1).split(":");
-                Time startTime = new Time(Integer.parseInt(startTimeString[0]), Integer.parseInt(startTimeString[1]));
+
                 Date dateStart = new Date (Integer.parseInt(cursor.getString(2).split("/")[0]),Integer.parseInt(cursor.getString(2).split("/")[1]),Integer.parseInt(cursor.getString(2).split("/")[2]));
-                Time endTime  =  new Time (Integer.parseInt(cursor.getString(3).split(":")[0]),Integer.parseInt(cursor.getString(3).split(":")[1]));
-                Date dateEnd = new Date (Integer.parseInt(cursor.getString(4).split("/")[0]),Integer.parseInt(cursor.getString(4).split("/")[1]),Integer.parseInt(cursor.getString(4).split("/")[2]));
-                String name = cursor.getString(6);
-                String description = cursor.getString(7);
-             Type type = new Type(cursor.getInt(9),cursor.getString(11));
-                Work work = new Work( name,  startTime,  endTime, cursor.getInt(8)==0? true:false ,  dateStart,  dateEnd,  type);
-                workList.add(work);
+               if(dateStart.isEqualOther(new Date(day,month+1,year))) {
+                   int id = cursor.getInt(0);
+                   String[] startTimeString = cursor.getString(1).split(":");
+                   Time startTime = new Time(Integer.parseInt(startTimeString[0]), Integer.parseInt(startTimeString[1]));
+                   Time endTime = new Time(Integer.parseInt(cursor.getString(3).split(":")[0]), Integer.parseInt(cursor.getString(3).split(":")[1]));
+                   Date dateEnd = new Date(Integer.parseInt(cursor.getString(4).split("/")[0]), Integer.parseInt(cursor.getString(4).split("/")[1]), Integer.parseInt(cursor.getString(4).split("/")[2]));
+                   String name = cursor.getString(6);
+                   String description = cursor.getString(7);
+                   Type type = new Type(cursor.getInt(9), cursor.getString(11));
+                   Work work = new Work(name, startTime, endTime, cursor.getInt(8) == 0 ? true : false, dateStart, dateEnd, type);
+                   workList.add(work);
+               }
+               else{
+                   continue;
+               }
             }while (cursor.moveToNext());
         }else{
 
