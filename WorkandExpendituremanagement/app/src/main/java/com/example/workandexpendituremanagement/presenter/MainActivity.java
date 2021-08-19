@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.workandexpendituremanagement.R;
 import com.example.workandexpendituremanagement.model.ConnectDB;
@@ -19,6 +20,7 @@ import com.example.workandexpendituremanagement.model.WorkEntity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView title = findViewById(R.id.main_title);
+        Calendar c= Calendar.getInstance();
+        title.setText("Hôm nay " + c.get(Calendar.DAY_OF_MONTH) + "/" + c.get(Calendar.MONTH));
         initListView();
         navigationView = findViewById(R.id.bottom_navigation);
         navigationView.setSelectedItemId(R.id.work);
