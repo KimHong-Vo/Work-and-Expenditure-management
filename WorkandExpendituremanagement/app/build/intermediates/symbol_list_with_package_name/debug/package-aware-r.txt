@@ -1812,6 +1812,7 @@ id bottom_navigation
 id bounce
 id btnCloseDialog
 id buttonPanel
+id button_scrollUp
 id cache_measures
 id cancel_button
 id center
@@ -1934,6 +1935,7 @@ id line3
 id linear
 id listMode
 id list_item
+id main_title
 id masked
 id material_clock_display
 id material_clock_face

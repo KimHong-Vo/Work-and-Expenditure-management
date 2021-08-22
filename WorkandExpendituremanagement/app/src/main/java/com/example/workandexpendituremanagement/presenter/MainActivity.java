@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView title = findViewById(R.id.main_title);
         Calendar c= Calendar.getInstance();
-        title.setText("Hôm nay " + c.get(Calendar.DAY_OF_MONTH) + "/" + c.get(Calendar.MONTH));
+        title.setText("Hôm nay " + c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1));
         initListView();
         navigationView = findViewById(R.id.bottom_navigation);
         navigationView.setSelectedItemId(R.id.work);

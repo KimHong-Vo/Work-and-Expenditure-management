@@ -18,7 +18,6 @@ import android.widget.TimePicker;
 
 import com.example.workandexpendituremanagement.R;
 import com.example.workandexpendituremanagement.model.Date;
-import com.example.workandexpendituremanagement.model.SpinnerWorkAdapter;
 import com.example.workandexpendituremanagement.model.Time;
 import com.example.workandexpendituremanagement.model.Type;
 import com.example.workandexpendituremanagement.model.TypeEntity;

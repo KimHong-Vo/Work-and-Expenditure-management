@@ -43,7 +43,15 @@
             android:onClick="clickAddBtn"/>
     </FrameLayout>
 
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_scrollUp">
     <LinearLayout
+        android:scrollbarStyle="insideInset"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
@@ -228,5 +236,7 @@
             android:layout_height="wrap_content"
             android:padding="14dp"/>
     </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
